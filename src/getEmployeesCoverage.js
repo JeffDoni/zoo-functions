@@ -14,8 +14,8 @@ const funcionarios = () => employees.map((employee) => {
     locations: animais.map((specie) => specie.location),
   };
 });
-console.log(funcionarios());
-function getEmployeesCoverage(dado) {
+
+const getEmployeesCoverage = (dado) => {
   if (dado === undefined) {
     return funcionarios();
   }
@@ -28,6 +28,6 @@ function getEmployeesCoverage(dado) {
     return confirmaId;
   }
   throw new Error('Informações inválidas');
-}
+};
 
 module.exports = getEmployeesCoverage;
