@@ -39,12 +39,12 @@ const diasDaSemana = (dia) => {
   return dia;
 };
 
-function getSchedule(scheduleTarget) {
+const getSchedule = (scheduleTarget) => {
   const diasemana = diasDaSemana(scheduleTarget);
   if (typeof diasemana === 'object') return diasemana;
   const result = species.find(({ name }) => name === scheduleTarget);
   if (scheduleTarget === undefined || result === undefined) return diasSelecionados();
   return result.availability;
-}
+};
 
 module.exports = getSchedule;
